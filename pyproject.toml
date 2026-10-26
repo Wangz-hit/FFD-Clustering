@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ffd-clustering"
+version = "0.1.0"
+description = "Research implementation of FFD-Clustering for unsupervised anomaly detection"
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["ffd_clustering*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
